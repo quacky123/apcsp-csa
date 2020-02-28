@@ -1,0 +1,69 @@
+package fun.Lab8_5;
+
+// Aadi Jain
+public class APBank {
+
+    int counter = 0;
+    Account[] acc = new Account[30];
+
+    public int addAccount(String firstName, String lastName, double balance) {
+        int accountNumber = counter + 1000;
+        acc[counter++] = new Account(accountNumber, firstName, lastName, balance);
+        return accountNumber;
+    }
+
+    // Serach by Balance
+    public String search(double balance) {
+        for (Account bal : acc) {
+            if ((bal!=null) && bal.getBalance() == balance) {
+                return bal.toString();
+            }
+            //System.out.println("Balance...........");
+        }
+        return "Not found";
+    }
+
+    // serach by name
+    public String search(String first, String last) {
+        for (Account name : acc) {
+            if ((name!=null) && name.getFirstName().equalsIgnoreCase(first) && name.getLastName().equalsIgnoreCase(last)) {
+                return name.toString();
+            }
+            //System.out.println("Name...........");
+        }
+        return "Not Found";
+    }
+
+    public String search(String last) {
+        for (Account lastName : acc) {
+            if ((lastName!=null) && lastName.getLastName().equalsIgnoreCase(last)) {
+                return lastName.toString();
+            }
+           // System.out.println("Last...........");
+        }
+        return "Not found";
+    }
+
+    public String searchFirst(String first) {
+        for (Account firstn : acc) {
+            if ((firstn!=null) && firstn.getFirstName().equalsIgnoreCase(first)) {
+                return firstn.toString();
+            }
+            //System.out.println("First......");
+        }
+
+        return "Not found";
+    }
+
+    // search by account number
+    public String search(int accountNumber) {
+        for (Account acctNum : acc) {
+            if ((acctNum != null) && (acctNum.getAcctNumber() == accountNumber)) {
+                return acctNum.toString();
+            }
+            //System.out.println("Number...");
+        }
+        return "Not found!";
+    }
+
+}
