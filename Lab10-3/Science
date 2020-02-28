@@ -1,0 +1,34 @@
+package fun.Lab10_3;
+
+// Aadi Jain
+
+public class Science extends GeneralClass{
+    
+    private String title, department, result;
+    private int number;
+    
+    public Science(String title, int number, String department) {
+        this.title=title;
+        this.number=number;
+        this.department=department;
+    }
+    
+    public int getNumber() {
+        return number;
+    }
+    
+    public String getDepartment() {
+        return department;
+    }
+    
+    public String getTitle() {
+        return title;
+    }
+    public String toString() {
+        result="Course Name: " + getTitle() + "\n";
+        result+="Course Number: " + getNumber() + "\n";
+        result+="Department: " + getDepartment() + "\n";
+        return result;
+    }
+    
+}
