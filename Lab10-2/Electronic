@@ -1,0 +1,11 @@
+package fun.Lab10_2;
+
+// Aadi Jain
+
+public abstract class Electronic {
+            
+    public abstract double getWeight();
+    public abstract double getCost();
+   
+    
+}
